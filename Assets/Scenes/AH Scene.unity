@@ -372,13 +372,9 @@ MonoBehaviour:
   groundCheck: {fileID: 1820788179}
   groundDistance: 0.4
   groundMask:
-    m_Bits: 64
+    serializedVersion: 2
+    m_Bits: 0
   jumpHeight: 2
-  velocity: {x: 0, y: 0, z: 0}
-  isGrounded: 0
-  crouchScale: {x: 1, y: 0.5, z: 1}
-  playerScale: {x: 0, y: 0, z: 0}
-  sneaking: 0
 --- !u!1 &1172151537
 GameObject:
   m_ObjectHideFlags: 0

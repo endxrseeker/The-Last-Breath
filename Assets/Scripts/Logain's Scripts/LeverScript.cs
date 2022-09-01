@@ -6,14 +6,33 @@ public class LeverScript : MonoBehaviour
 {
 
     bool lever_Active = false;
-    public float timer;
+    public Material deactive;
+    public Material active;
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown (KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E))
         {
-            lever_Active = true;
-            Debug.Log("Lever Active");
+        Debug.Log("Lever ");
+
+            if (lever_Active == false)
+            {
+                lever_Active = true;
+                Debug.Log("Lever Activated");
+                GetComponent<Renderer>().material = active;
+
+            }
+            
+
+            else
+            {
+                lever_Active = false;
+                Debug.Log("Lever Deactivated");
+                GetComponent<Renderer>().material = deactive;
+            }
+
         }
     }
+
+   
 }

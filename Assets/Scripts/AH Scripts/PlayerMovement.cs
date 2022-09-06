@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 12f;
+    public float walkSpeed = 12f;
+    public float sprintSpeed = 24f;
     public CharacterController controller;
     public float gravity = -9.81f;
 
@@ -39,10 +40,25 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * walkSpeed * Time.deltaTime);
 
 
+        //Sprinting
 
+        if (Input.GetKey(KeyCode.LeftShift))
+
+        {
+            walkSpeed = sprintSpeed;
+        }
+        else
+
+        {
+            walkSpeed = 12f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            walkSpeed = 12f;
+        }
 
 
         //Sneaking on/off
@@ -53,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
                 sneaking = true;
                 Debug.Log("StartSneak");
         }
-        if (Input.GetKeyDown(KeyCode.LeftControl) && sneaking == true)
+        if (Input.GetKeyUp(KeyCode.LeftControl))
         {
                 StopSneak();
                 sneaking = false;

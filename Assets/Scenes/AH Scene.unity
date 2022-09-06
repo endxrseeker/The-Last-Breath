@@ -373,8 +373,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
-  jumpHeight: 2
+    m_Bits: 8
 --- !u!1 &1172151537
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +386,7 @@ GameObject:
   - component: {fileID: 1172151539}
   - component: {fileID: 1172151538}
   - component: {fileID: 1172151541}
+  - component: {fileID: 1172151542}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -491,6 +491,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1172151542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172151537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933405077e7119445926b5ea24f2877e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  playerBody: {fileID: 27472064}
 --- !u!1 &1546141042
 GameObject:
   m_ObjectHideFlags: 0

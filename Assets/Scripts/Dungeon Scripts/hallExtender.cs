@@ -11,6 +11,7 @@ public class hallExtender : MonoBehaviour
     GameObject back;
     GameObject right;
     GameObject left;
+    public GameObject frontWall;
 
     BoxCollider boxCollider;
 
@@ -29,12 +30,22 @@ public class hallExtender : MonoBehaviour
                 GameObject Front = Instantiate(cornerExpand.hall, front.transform.position, front.transform.rotation);
                 hallExtender hallExtender = Front.GetComponent<hallExtender>();
                 hallExtender.cornerExpand = cornerExpand;
-
-                //wallController wallController = Front.GetComponent<wallController>();
-                //wallController.putWalls();
+                //frontWall.SetActive(false);
             }
-            else print(hit.collider.name);
+            //else
+            //{
+            //    frontWall.SetActive(true);
+            //}
             cornerExpand.expandingIterations++;
+        }
+        else
+        {
+            RaycastHit hit;
+            if(!Physics.Raycast(new Vector3(front.transform.position.x, front.transform.position.y + 1, front.transform.position.z), Vector3.down, out hit))
+            {
+                frontWall.gameObject.SetActive(true);
+            }
+            else frontWall.gameObject.SetActive(false);
         }
     }
 

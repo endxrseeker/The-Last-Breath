@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: eb1e1ff0a83d5cc498f7c939f79a17d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: eb1e1ff0a83d5cc498f7c939f79a17d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   roomSpawner: {fileID: 0}
   cornerPiece: {fileID: 4982778013503339124, guid: fd7be51678724974a91f2660e9df24fc, type: 3}
-  maxIterations: 25
+  maxIterations: 50
   closestRoom: {fileID: 0}
   secondClosestRoom: {fileID: 0}
   thirdClosestRoom: {fileID: 0}

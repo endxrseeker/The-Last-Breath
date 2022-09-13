@@ -5,32 +5,33 @@ using UnityEngine;
 public class LeverScript : MonoBehaviour
 {
 
-    bool lever_Active = false;
+    private bool lever_Active = false;
     public Material deactive;
     public Material active;
+    public GameObject Lever_Handle;
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyUp(KeyCode.E))
+
+        if (other.tag == "Player")
         {
-        Debug.Log("Lever ");
-
-            if (lever_Active == false)
+            if (Input.GetKeyUp(KeyCode.E))
             {
-                lever_Active = true;
-                Debug.Log("Lever Activated");
-                GetComponent<Renderer>().material = active;
+                if (lever_Active == false)
+                {
+                    lever_Active = true;
+                    Debug.Log("Lever Activated");
+                    Lever_Handle.GetComponent<Renderer>().material = active;
+
+                }
+                else
+                {
+                    lever_Active = false;
+                    Debug.Log("Lever Deactivated");
+                    Lever_Handle.GetComponent<Renderer>().material = deactive;
+                }
 
             }
-            
-
-            else
-            {
-                lever_Active = false;
-                Debug.Log("Lever Deactivated");
-                GetComponent<Renderer>().material = deactive;
-            }
-
         }
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2846214, g: 0.37120992, b: 0.498806, a: 1}
+  m_IndirectSpecularColor: {r: 0.28462005, g: 0.37120837, b: 0.4988044, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,6 +219,7 @@ Transform:
   m_Father: {fileID: 1993428021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &27472063
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 27472064}
+=======
+>>>>>>> 8b1a82af22a9822c325a86557d04a7a11f4124da
 --- !u!1 &1546141042
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +698,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1820788178
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +729,8 @@ Transform:
   m_Father: {fileID: 27472064}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 8b1a82af22a9822c325a86557d04a7a11f4124da
 --- !u!1 &1993428020
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +762,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &2133990413
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,3 +927,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+--- !u!1001 &3454340842755145244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3454340842731867811, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_Name
+      value: PlayerObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.015777588
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.059
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.16890335
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454340842731867868, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45400ec330366b84aa5a96cfbd63fb2e, type: 3}
+>>>>>>> 8b1a82af22a9822c325a86557d04a7a11f4124da

@@ -587,6 +587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02af67ea57688c54fa06f3349bdab82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cornerExpand: {fileID: 0}
+  cornerExpand: {fileID: 697244588, guid: fd7be51678724974a91f2660e9df24fc, type: 3}
   roomController: {fileID: 134346544857517831, guid: ccaca06df2bdd204c965cdf1e134e4f4, type: 3}
   frontWall: {fileID: 774037042825777252}

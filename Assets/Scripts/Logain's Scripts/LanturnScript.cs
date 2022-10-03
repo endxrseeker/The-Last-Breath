@@ -10,7 +10,7 @@ public class LanturnScript : MonoBehaviour
     public Light Point_light;
     private bool Flame_On = false;
     private ParticleSystem flame;
-    private Light light;
+    private Light Bright;
 
 
     void Awake()
@@ -38,7 +38,7 @@ public class LanturnScript : MonoBehaviour
         {
 
             flame = Instantiate(Flame_Effect, Lanturn_Position);
-            light = Instantiate(Point_light, Lanturn_Position);
+            Bright = Instantiate(Point_light, Lanturn_Position);
             Debug.Log("a");
             Flame_On = true;
         }
@@ -46,7 +46,7 @@ public class LanturnScript : MonoBehaviour
         void TurnOff()
         {
             Destroy(flame);
-            Destroy(light);
+            Destroy(Bright);
 
             Debug.Log("d");
             Flame_On = false;

@@ -3501,7 +3501,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   roomSpawner: {fileID: 0}
   cornerPiece: {fileID: 4982778013503339124, guid: fd7be51678724974a91f2660e9df24fc, type: 3}
-  maxIterations: 100
+  maxIterations: 25
   closestRoom: {fileID: 0}
   secondClosestRoom: {fileID: 0}
   thirdClosestRoom: {fileID: 0}

@@ -6,9 +6,9 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
-    public NavMeshAgent agent;
+    private NavMeshAgent agent;
 
-    public Transform player;
+    private Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -22,13 +22,13 @@ public class EnemyAI : MonoBehaviour
     bool alreadyAttacked;
 
     //States
-    public float sightRange, attackRange;
+    public GameObject sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
     private void Awake()
 
     {
-        player = GameObject.Find("PlayerObj").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -36,12 +36,22 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         //Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+       if (sightRange.)
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+
+        if (playerInSightRange == true)
+        {
+            ChasePlayer();
+            if (playerInAttackRange == true)
+            {
+                AttackPlayer();
+            }
+        }
+        else if (playerInSightRange == false)
+        {
+            Patrolling();
+        }
+        
     }
 
     private void Patrolling()

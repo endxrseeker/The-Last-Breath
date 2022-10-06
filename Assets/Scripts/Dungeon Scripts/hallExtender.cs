@@ -48,9 +48,4 @@ public class hallExtender : MonoBehaviour
             else frontWall.gameObject.SetActive(false);
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(new Vector3(front.transform.position.x, front.transform.position.y + 1, front.transform.position.z), 2);
-    }
 }

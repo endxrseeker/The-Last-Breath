@@ -22,7 +22,7 @@ public class wallController : MonoBehaviour
         {
             i += Time.deltaTime;
         }
-        else putWalls();
+        else print("Yes"); putWalls();
     }
 
     void putWalls()

@@ -25,7 +25,13 @@ public class cornerExpand : MonoBehaviour
 
         if(collider.Length > 1)
         {
-            Destroy(gameObject);
+            foreach(Collider col in collider)
+            {
+                if(col.tag != "Corner")
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
 
 

@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         //Check for sight and attack range
-       if (sightRange.)
+      // if (sightRange.)
 
 
         if (playerInSightRange == true)

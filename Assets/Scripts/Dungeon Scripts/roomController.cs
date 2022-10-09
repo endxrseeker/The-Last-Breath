@@ -12,7 +12,7 @@ public class roomController : MonoBehaviour
     float closestRoomDistance = 1000000000000000000;
     float secondClosestRoomDistance = 1000000000000000000;
     float thirdClosestRoomDistance = 1000000000000000000;
-    public int maxIterations;
+    public int maxIterations = 25;
 
     public GameObject closestRoom;
     public GameObject secondClosestRoom;

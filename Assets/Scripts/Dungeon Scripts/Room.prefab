@@ -3446,7 +3446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6588634455140994959}
   - component: {fileID: 134346544857517831}
-  - component: {fileID: 6121042544213529601}
+  - component: {fileID: 5021307635259980234}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -3505,7 +3505,7 @@ MonoBehaviour:
   closestRoom: {fileID: 0}
   secondClosestRoom: {fileID: 0}
   thirdClosestRoom: {fileID: 0}
---- !u!114 &6121042544213529601
+--- !u!114 &5021307635259980234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8719169727551318999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 067c035057715c04c887f5fe461d8739, type: 3}
+  m_Script: {fileID: 11500000, guid: d2dad213d66a900469805a5fcc08ea0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FrontWall: {fileID: 919132149106638840}

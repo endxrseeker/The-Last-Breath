@@ -23,7 +23,6 @@ public class hallExtender : MonoBehaviour
 
         if (cornerExpand.expandingIterations <= roomController.maxIterations)
         {
-            print("Doing the funny");
             RaycastHit hit;
             if (!Physics.Raycast(new Vector3(front.transform.position.x, front.transform.position.y + 1, front.transform.position.z), Vector3.down, out hit))
             {

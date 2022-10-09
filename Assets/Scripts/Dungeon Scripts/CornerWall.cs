@@ -16,7 +16,6 @@ public class CornerWall : MonoBehaviour
 
     public void PlaceWalls()
     {
-        print("I wanna not");
         if (Physics.Raycast(new Vector3(FrontWall.transform.position.x, 5, FrontWall.transform.position.z + 5), Vector3.down))
         {
             FrontWall.gameObject.SetActive(false);

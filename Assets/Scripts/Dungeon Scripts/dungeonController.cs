@@ -5,9 +5,9 @@ using UnityEngine;
 public class dungeonController : MonoBehaviour
 {
     public GameObject[] rooms;
-    public int maxRoomNumber;
-    public int maxDungeonSize;
-    public int maxLevels = 0;
+    public int maxRoomNumber = 20;
+    public int maxDungeonSize = 250;
+    private int maxLevels = 1;
 
     public GameObject roomParent;
 

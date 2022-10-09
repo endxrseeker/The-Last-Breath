@@ -128,6 +128,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6005702999601131702, guid: b0071ac51e21e4041acde986c7a8633f, type: 3}
   m_PrefabInstance: {fileID: 6005702997838555259}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1278768593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278768592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c1cd3675330d84395c03efc8174f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 8719169727551318999, guid: ccaca06df2bdd204c965cdf1e134e4f4, type: 3}
+  maxRoomNumber: 20
+  maxDungeonSize: 250
+  roomParent: {fileID: 0}
+  roomsList: []
 --- !u!114 &1278768595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPref: {fileID: 4255884566815581108, guid: 01d1ac46ee3c4154fbc170895e62c8ed, type: 3}
   OxygenPref: {fileID: 0}
-  tileSize: 0
+  tileSize: 250
 --- !u!1 &1329326526
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,5 +313,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon Controller
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6005702999601131701, guid: b0071ac51e21e4041acde986c7a8633f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b0071ac51e21e4041acde986c7a8633f, type: 3}

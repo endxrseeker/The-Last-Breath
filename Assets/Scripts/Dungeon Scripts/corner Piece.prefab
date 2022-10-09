@@ -260,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6432205996088549849}
   - component: {fileID: 697244588}
-  - component: {fileID: -2359040741044041376}
+  - component: {fileID: 6726458452869785564}
   m_Layer: 0
   m_Name: corner Piece
   m_TagString: Corner
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expandingIterations: 0
   hall: {fileID: 9133090002283556796, guid: 232e53a0f58baac43abd356ce054a776, type: 3}
---- !u!114 &-2359040741044041376
+--- !u!114 &6726458452869785564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4982778013503339124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95279721e2cd50a42939f12b6b5ec634, type: 3}
+  m_Script: {fileID: 11500000, guid: f7351784533182c488f70df611201ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FrontWall: {fileID: 7914721305013058448}

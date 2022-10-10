@@ -5,7 +5,6 @@ using UnityEngine;
 public class spawner : MonoBehaviour
 {
     public GameObject PlayerPref;
-    public GameObject OxygenPref;
 
     public int tileSize;
 
@@ -19,14 +18,9 @@ public class spawner : MonoBehaviour
             if (Physics.Raycast(new Vector3(Random.Range(-tileSize, tileSize), 100, Random.Range(-tileSize, tileSize)), Vector3.down, out hit))
             {
                 print("yes");
-                Instantiate(PlayerPref, hit.transform);
+                Instantiate(PlayerPref, hit.transform.position, Quaternion.identity);
                 playerInGame = true;
             }
         }
-    }
-
-    public void SpawnOxygen()
-    {
-
     }
 }

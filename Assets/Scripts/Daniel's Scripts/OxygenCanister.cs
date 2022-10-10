@@ -43,7 +43,7 @@ public class OxygenCanister : MonoBehaviour
 
             collisionCollider.enabled = false; //disable the collsion collider of this object
             triggerCollider.enabled = false; //disable the trigger collider of this object
-            rigidBody.useGravity = false; //disable the gravity component of the rigidbody on this object
+            //rigidBody.useGravity = false; //disable the gravity component of the rigidbody on this object
 
         }
         

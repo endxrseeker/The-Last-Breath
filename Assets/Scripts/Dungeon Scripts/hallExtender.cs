@@ -37,14 +37,5 @@ public class hallExtender : MonoBehaviour
             //}
             cornerExpand.expandingIterations++;
         }
-        else
-        {
-            RaycastHit hit;
-            if(!Physics.Raycast(new Vector3(front.transform.position.x, front.transform.position.y + 1, front.transform.position.z), Vector3.down, out hit))
-            {
-                frontWall.gameObject.SetActive(true);
-            }
-            else frontWall.gameObject.SetActive(false);
-        }
     }
 }

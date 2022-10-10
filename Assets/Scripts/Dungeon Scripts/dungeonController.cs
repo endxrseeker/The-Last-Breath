@@ -41,7 +41,13 @@ public class dungeonController : MonoBehaviour
                 Collider[] col = Physics.OverlapBox(room.transform.position, new Vector3(20, 3, 20), room.transform.rotation);
                 if (col.Length > 1)
                 {
-                    Destroy(room);
+                    foreach(Collider collider in col)
+                    {
+                        if(collider.tag != "o2")
+                        {
+                            Destroy(collider.gameObject);
+                        }
+                    }
                 }
                 roomsList.Add(room);
             }

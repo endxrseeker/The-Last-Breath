@@ -7,32 +7,50 @@ public class hallWall : MonoBehaviour
     public GameObject rightWall;
     public GameObject leftWall;
     public GameObject backWall;
+    public GameObject frontWall;
+    
+    public Transform rightWallpos;
+    public Transform leftWallpos;
+    public Transform backWallpos;
+    public Transform frontWallpos;
 
-    public void Update()
+    public void Start()
     {
-        float time = 0;
-        bool done = false;
-        time += Time.deltaTime;
+        StartCoroutine(wait());
+    }
 
-        if(time > 4 && !done)
+    void placeWalls()
+    {
+        print("YYes");
+        if (!Physics.Raycast(rightWallpos.position, Vector3.down))
         {
-            if(Physics.Raycast(new Vector3(rightWall.transform.position.x + 5, rightWall.transform.position.y, rightWall.transform.position.z), Vector3.down))
-            {
-                rightWall.SetActive(true);
-            }
-            else rightWall.SetActive(false);
-
-            if (Physics.Raycast(new Vector3(leftWall.transform.position.x - 5, leftWall.transform.position.y, leftWall.transform.position.z), Vector3.down))
-            {
-                leftWall.SetActive(true);
-            }
-            else leftWall.SetActive(false);
-
-            if (Physics.Raycast(new Vector3(backWall.transform.position.x, backWall.transform.position.y, backWall.transform.position.z - 5), Vector3.down))
-            {
-                backWall.SetActive(true);
-            }
-            else backWall.SetActive(false);
+            rightWall.SetActive(true);
         }
+        else rightWall.SetActive(false);
+
+        if (!Physics.Raycast(leftWallpos.position, Vector3.down))
+        {
+            leftWall.SetActive(true);
+        }
+        else leftWall.SetActive(false);
+
+        if (!Physics.Raycast(backWallpos.position, Vector3.down))
+        {
+            backWall.SetActive(true);
+        }
+        else backWall.SetActive(false);
+
+        if (!Physics.Raycast(frontWallpos.position, Vector3.down))
+        {
+            frontWall.SetActive(true);
+        }
+        else frontWall.SetActive(false);
+    }
+
+    public IEnumerator wait()
+    {
+        yield return new WaitForSeconds(10f);
+
+        placeWalls();
     }
 }

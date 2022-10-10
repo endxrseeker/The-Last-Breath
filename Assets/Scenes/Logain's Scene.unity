@@ -184,14 +184,12 @@ MonoBehaviour:
     m_Bits: 8
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 3
   timeBetweenAttacks: 1
-  sightRange: 5
-  attackRange: 2
+  sightRange: {fileID: 0}
   playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!136 &79359855
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -758,7 +756,7 @@ GameObject:
   - component: {fileID: 499013956}
   - component: {fileID: 499013955}
   - component: {fileID: 499013958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1266,7 +1264,7 @@ GameObject:
   - component: {fileID: 972637008}
   - component: {fileID: 972637007}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Attack A.I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,7 +1279,7 @@ Transform:
   m_GameObject: {fileID: 972637005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 79359858}
   m_RootOrder: 0
@@ -1588,7 +1586,7 @@ GameObject:
   - component: {fileID: 1325471140}
   - component: {fileID: 1325471143}
   - component: {fileID: 1325471144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1720,7 +1718,7 @@ GameObject:
   - component: {fileID: 1335680066}
   - component: {fileID: 1335680065}
   - component: {fileID: 1335680064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2394,7 +2392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2093946831}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lantern Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}

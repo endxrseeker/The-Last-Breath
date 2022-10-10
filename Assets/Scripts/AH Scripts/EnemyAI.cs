@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
 
     private NavMeshAgent agent;
-
+    public GameManager StateManager;
     private Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
@@ -17,35 +17,28 @@ public class EnemyAI : MonoBehaviour
     bool walkPointSet;
     public float walkPointRange;
 
-    //Attacking
-    public float timeBetweenAttacks;
-    bool alreadyAttacked;
-
     //States
-    public GameObject sightRange, attackRange;
+    public SphereCollider sightRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    private void Awake()
+    public CapsuleCollider AttackRange;
 
+    private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
-
     private void Update()
     {
-        //Check for sight and attack range
+      //Check for sight and range
       // if (sightRange.)
 
 
         if (playerInSightRange == true)
         {
             ChasePlayer();
-            if (playerInAttackRange == true)
-            {
-                AttackPlayer();
-            }
+            
         }
         else if (playerInSightRange == false)
         {
@@ -53,6 +46,18 @@ public class EnemyAI : MonoBehaviour
         }
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        playerInSightRange = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        playerInSightRange = false;
+    }
+
+    
 
     private void Patrolling()
 
@@ -85,32 +90,7 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayer()
 
     {
-        agent.SetDestination(player.position);
+        agent.SetDestination(player.position); 
 
     }
-
-    private void AttackPlayer()
-
-    {
-        //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
-        transform.LookAt(player);
-
-        if (!alreadyAttacked)
-        {
-            
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
-
-    }
-
-  
-    private void ResetAttack()
-    {
-        alreadyAttacked = false; 
-
-    }
-
-
 }

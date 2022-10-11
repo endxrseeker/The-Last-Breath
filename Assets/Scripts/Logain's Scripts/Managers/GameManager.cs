@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
 
     private void OnNewGame()
     {
-        Player_GameState = GameState.Playing;
+        SceneManager.LoadScene(1);
     }
         
     private void OnRestart()

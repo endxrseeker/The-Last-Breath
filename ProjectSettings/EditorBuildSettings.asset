@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/Logain's Scene.unity
+    guid: 1906234c37743dd44ba1b9a64969713b
+  - enabled: 1
+    path: Assets/Scenes/Ashton M 2.unity
+    guid: 8ce3eb73807f36d489b4a288ed10b2b3
   m_configObjects: {}

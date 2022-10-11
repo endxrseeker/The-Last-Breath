@@ -33,11 +33,11 @@ public class wallController : MonoBehaviour
         }
         else FrontWall.SetActive(false);
 
-        if (!Physics.Raycast(backWall.position, Vector3.down))
-        {
-            BackWall.SetActive(true);
-        }
-        else BackWall.SetActive(false);
+        //if (!Physics.Raycast(backWall.position, Vector3.down))
+        //{
+        //    BackWall.SetActive(true);
+        //}
+        //else BackWall.SetActive(false);
 
         if (!Physics.Raycast(leftWall.position, Vector3.down))
         {

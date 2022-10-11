@@ -23,6 +23,8 @@ public class PlayerOxygenManager : MonoBehaviour
 
     GameObject canisterInHandOne; //the oxygen canister occupying the first canister slot
     GameObject canisterInHandTwo; //the oxygen canister occupying the second canister slot
+    public GameObject hand;
+    public GameObject gameOver;
 
     GameObject activeCanister; //the oxygen canister currently being consumed
 
@@ -51,6 +53,7 @@ public class PlayerOxygenManager : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.mouseScrollDelta.y != 0 && currentAmountOfCanistersInHand == 2) //if the player moves the mouse scroll wheel &AND& they are currently carrying two oxygen canisters...
         {
             SelectCanisterToUse(); //call the "SelectCanisterToUse" function to change the currently selected canister
@@ -95,8 +98,8 @@ public class PlayerOxygenManager : MonoBehaviour
         }
 
         //this is where the code that kills the player and ends the game would go
-        Debug.Log("You ran out of oxygen and suffocated, game over.");
-
+        gameOver.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 
@@ -117,7 +120,7 @@ public class PlayerOxygenManager : MonoBehaviour
 
     public void OxygenCanisterPickedUp(GameObject pickedUpCanister)
     {
-        pickedUpCanister.transform.parent = gameObject.transform; //set the newly picked up canister's parent to be this game object (the player)
+        pickedUpCanister.transform.parent = hand.transform; //set the newly picked up canister's parent to be this game object (the player)
 
         if (currentAmountOfCanistersInHand == 0 || currentAmountOfCanistersInHand == 1 && canisterInHandOne == null) //if the player does not have any oxygen canisters |OR| the player has one oxygen canister &AND& it's not in slot one...
         {
@@ -125,8 +128,8 @@ public class PlayerOxygenManager : MonoBehaviour
 
             activeCanister = canisterInHandOne; //set the active canister to the first canister
 
-            canisterInHandOne.transform.localPosition = canisterOneStartLocation; //set the first canister's location to the designated location for the first canister
-            canisterInHandOne.transform.localRotation = canisterOneRotation; //set the first canister's rotation to the designated rotation for the first canister
+            pickedUpCanister.transform.position = hand.transform.position;
+            pickedUpCanister.transform.rotation = hand.transform.rotation;
         }
         else if (currentAmountOfCanistersInHand == 1) //otherwise if "currentCanistersInHand" is equal to 1... (the player has only 1 canister)
         {

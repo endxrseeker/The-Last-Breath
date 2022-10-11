@@ -37,14 +37,18 @@ public class OxygenCanister : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 7 && playerOxygenManager.currentAmountOfCanistersInHand != 2) //if the object that enters the trigger is on layer 7 (the Player layer) &AND& the player is not already carrying two canisters...
+        if(other.gameObject.layer == 7) //if the object that enters the trigger is on layer 7 (the Player layer) &AND& the player is not already carrying two canisters...
         {
-            playerOxygenManager.OxygenCanisterPickedUp(gameObject); //call the "OxygenCanisterPickedUp" function from the "playerOxygenManager" script and tell the function which object this is
+            playerOxygenManager = other.gameObject.GetComponent<PlayerOxygenManager>();
 
-            collisionCollider.enabled = false; //disable the collsion collider of this object
-            triggerCollider.enabled = false; //disable the trigger collider of this object
-            //rigidBody.useGravity = false; //disable the gravity component of the rigidbody on this object
+            if (playerOxygenManager.currentAmountOfCanistersInHand != 2)
+            {
+                playerOxygenManager.OxygenCanisterPickedUp(gameObject); //call the "OxygenCanisterPickedUp" function from the "playerOxygenManager" script and tell the function which object this is
 
+                collisionCollider.enabled = false; //disable the collsion collider of this object
+                triggerCollider.enabled = false; //disable the trigger collider of this object
+                                                 //rigidBody.useGravity = false; //disable the gravity component of the rigidbody on this object
+            }
         }
         
     }

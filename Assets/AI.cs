@@ -14,6 +14,7 @@ public class AI : MonoBehaviour
 
     public NavMeshAgent agent;
     public GameObject player;
+    public GameObject gameOver;
 
     public enum AIStates
     {
@@ -31,57 +32,17 @@ public class AI : MonoBehaviour
     {
         player = GameObject.Find("Player");
 
-        Eyes.transform.LookAt(player.transform);
-        RaycastHit hit;
-        if(Physics.Raycast(Eyes.transform.position, Eyes.transform.forward, out hit))
+        agent.SetDestination(player.transform.position);
+        lastKnownPos = player.transform.position;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
         {
-            if(hit.collider.tag == "Player")
-            {
-                canSee = true;
-                state = AIStates.chasing;
-            }
+            o2Manager manager = other.gameObject.gameObject.GetComponent<o2Manager>();
+
+            manager.currentOxygen = 0;
         }
-        else canSee = false;
-
-        
-
-        if (state == AIStates.chasing)
-        {
-            if (!canSee)
-            {
-                state = AIStates.searchingLastSeen;
-            }
-        }
-
-        if (lastKnownPos == Vector3.zero && state != AIStates.chasing)
-        {
-            state = AIStates.searching;
-        }
-
-        #region Chasing
-
-        if(state == AIStates.chasing)
-        {
-            agent.SetDestination(hit.collider.transform.position);
-            lastKnownPos = hit.collider.transform.position;
-        }
-
-        if(state == AIStates.searchingLastSeen)
-        {
-            agent.SetDestination(lastKnownPos);
-
-            if(agent.transform.position == lastKnownPos)
-            {
-                lastKnownPos = Vector3.zero;
-                state = AIStates.searching;
-            }
-        }
-
-        if(state == AIStates.searching)
-        {
-            //searching
-        }
-
-        #endregion
     }
 }

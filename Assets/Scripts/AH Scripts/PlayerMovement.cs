@@ -16,19 +16,10 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
 
-    //bool isGrounded;
-
-    //Sneak
-    private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
-    private Vector3 playerScale;
-    private bool sneaking;
-
 
     // Update is called once per frame
     void Update()
     {
-        //isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
         if (controller.isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -59,35 +50,6 @@ public class PlayerMovement : MonoBehaviour
         {
             walkSpeed = 12f;
         }
-
-
-        //Sneaking on/off
-
-        if (Input.GetKeyDown(KeyCode.LeftControl) && sneaking == false)
-        {  
-                StartSneak();
-                sneaking = true;
-                Debug.Log("StartSneak");
-        }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-                StopSneak();
-                sneaking = false;
-                Debug.Log("StopSneak");
-        }
-    }
-
-
-    private void StartSneak()
-    {
-        transform.localScale = crouchScale;
-        transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-    }
-
-    private void StopSneak()
-    {
-        transform.localScale = playerScale;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
 }
 

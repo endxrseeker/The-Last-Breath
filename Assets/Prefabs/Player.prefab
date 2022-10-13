@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 3266051703651354167}
   - component: {fileID: 3266051703651354166}
   - component: {fileID: 3266051703651354165}
-  - component: {fileID: 3266051703651354162}
+  - component: {fileID: 1921937766}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -236,7 +236,7 @@ MonoBehaviour:
   horizontalMouseSensitivity: 100
   playerBody: {fileID: 3266051703651354164}
   playerCamera: {fileID: 3266051702437191105}
---- !u!114 &3266051703651354162
+--- !u!114 &1921937766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,12 +245,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3266051703651354057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d9c8d3e5309b294cb48265aa94a85f0, type: 3}
+  m_Script: {fileID: 11500000, guid: d28d1aba159fa39448773976da819330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumPlayerOxygen: 100
-  currentPlayerOxygen: 0
-  playerOxygenDrainRate: 1
-  canisterRecoveryRate: 2
-  currentAmountOfCanistersInHand: 0
-  hand: {fileID: 873570308}
+  currentOxygen: 0
+  gameOver: {fileID: 0}

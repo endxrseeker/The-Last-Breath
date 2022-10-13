@@ -44,13 +44,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        m_NewGameButton.gameObject.SetActive(false);
-        m_QuitGameButton.gameObject.SetActive(false);
-        m_background.gameObject.SetActive(false);
-        m_RestartButton.gameObject.SetActive(false);
-        m_TitleText.gameObject.SetActive(false);
-        m_DeadText.gameObject.SetActive(false);
-        Cursor.visible = false;
+        //m_NewGameButton.gameObject.SetActive(false);
+        //m_QuitGameButton.gameObject.SetActive(false);
+        //m_background.gameObject.SetActive(false);
+        //m_RestartButton.gameObject.SetActive(false);
+        //m_TitleText.gameObject.SetActive(false);
+        //m_DeadText.gameObject.SetActive(false);
 
 
     }
@@ -61,17 +60,6 @@ public class GameManager : MonoBehaviour
         switch (Player_GameState)
         {
             case GameState.Start:
-
-
-
-                m_NewGameButton.gameObject.SetActive(true);
-                m_QuitGameButton.gameObject.SetActive(true);
-                m_background.gameObject.SetActive(true);
-                m_TitleText.gameObject.SetActive(true);
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                Player.SetActive(false);
-
 
                 break;
 
@@ -114,12 +102,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
         
-    private void OnRestart()
+    public void OnRestart()
     {
         Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1f;
     }
 
-    private void OnQuitGame()
+    public void OnQuitGame()
     {
         Application.Quit();
     }
